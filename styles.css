@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 30px;
+}
+
+h1 {
+  color: #1f2937;
+}
+
+/* Menu buttons at the top */
+.menu button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin-right: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu button:hover {
+  background: #1d4ed8;
+}
+
+/* Each section is a white box */
+.section {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* This class hides a section */
+.hidden {
+  display: none;
+}
+
+/* Form fields */
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input, select {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px;
+  margin-top: 4px;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+.section > button {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background: #2563eb;
+  color: white;
+}
+
+/* Messages */
+.good { color: green; }
+.bad  { color: red; }

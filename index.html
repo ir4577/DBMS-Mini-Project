@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Matching Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>College Job Matching Portal</h1>
+
+  <div class="menu">
+    <button onclick="showSection('student')">Student: Add Profile</button>
+    <button onclick="showSection('employer')">Employer: View Students & Jobs</button>
+    <button onclick="showSection('post')">Employer: Post Job</button>
+  </div>
+
+  <!-- SECTION 1: Student adds profile -->
+  <div id="student" class="section">
+    <h2>Add Your Profile</h2>
+    <p id="studentMsg"></p>
+
+    <label>Name</label>
+    <input type="text" id="sName">
+
+    <label>Email</label>
+    <input type="text" id="sEmail">
+
+    <label>Phone</label>
+    <input type="text" id="sPhone">
+
+    <label>CGPA (0-10)</label>
+    <input type="number" id="sCgpa" step="0.01" min="0" max="10">
+
+    <label>Skills</label>
+    <div id="studentSkills"></div>
+
+    <button onclick="addStudent()">Create Profile</button>
+  </div>
+
+  <!-- SECTION 2: Employer sees everything -->
+  <div id="employer" class="section hidden">
+    <h2>All Registered Students</h2>
+    <table>
+      <thead>
+        <tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>CGPA</th><th>Skills</th></tr>
+      </thead>
+      <tbody id="studentTable"></tbody>
+    </table>
+
+    <h2>Open Jobs</h2>
+    <table>
+      <thead>
+        <tr><th>Title</th><th>Company</th><th>Min CGPA</th><th>Skills Needed</th><th>Deadline</th><th>Eligible Students</th></tr>
+      </thead>
+      <tbody id="jobTable"></tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 3: Employer posts a job -->
+  <div id="post" class="section hidden">
+    <h2>Post a Job</h2>
+    <p id="jobMsg"></p>
+
+    <label>Company</label>
+    <select id="jCompany"></select>
+
+    <label>Job Title</label>
+    <input type="text" id="jTitle">
+
+    <label>Minimum CGPA</label>
+    <input type="number" id="jCgpa" step="0.01" min="0" max="10" value="0">
+
+    <label>Deadline</label>
+    <input type="date" id="jDeadline">
+
+    <label>Skills Needed</label>
+    <div id="jobSkills"></div>
+
+    <button onclick="addJob()">Post Job</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
